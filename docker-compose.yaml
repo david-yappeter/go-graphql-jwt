@@ -1,0 +1,12 @@
+version: "3"
+
+services: 
+  mysql:
+    image: mysql:latest
+    container_name: mysql-go-container
+    ports: 
+      - 3306:3306
+    volumes:
+      - ~/mysql-data:/var/lib/mysql
+    environment: 
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
